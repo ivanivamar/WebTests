@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700&display=swap");
+body {
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.Application {
+  width: 70%;
+  margin: 128px auto;
+}
+
+.md-navbar {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  align-items: center;
+}
+.md-navbar .md-navbar__logo {
+  margin: 0;
+}
+.md-navbar .md-navbar__logo img {
+  width: 50%;
+}
+.md-navbar .md-navbar__links {
+  margin-right: 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  color: #5D74B6;
+  font-size: 56px;
+  margin-bottom: 20px;
+  font-family: "Volte Semibold";
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Volte Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Regular Italic"), url("../../../static/fonts/VolteRegularItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Regular"), url("../../../static/fonts/Volte.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Light Italic"), url("../../../static/fonts/VolteLightItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Light"), url("../../../static/fonts/VolteLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Medium Italic"), url("../../../static/fonts/VolteMediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Medium"), url("../../../static/fonts/VolteMedium.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Semibold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Semibold Italic"), url("../../../static/fonts/VolteSemiboldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Semibold"), url("../../../static/fonts/VolteSemibold.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Bold Italic"), url("../../../static/fonts/VolteBoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Volte Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Volte Bold"), url("../../../static/fonts/VolteBold.woff") format("woff");
+}
+.tile {
+  width: 220px;
+  height: 320px;
+  display: inline-block;
+}
+.tile.history-tile {
+  box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: transparent;
+  border-radius: 15px;
+  margin-right: 16px;
+  transform-style: preserve-3d;
+}
+.tile.history-tile .tile-content {
+  position: relative;
+  height: 100%;
+}
+.tile.history-tile .tile-content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.tile.history-tile .tile-content .content-text {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+  font-family: "Volte Semibold";
+  font-size: 30px;
+}
+.tile.history-tile:hover {
+  box-shadow: 0 2px 60px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+.tile.history-tile:hover .tile-content {
+  transition: all 0.3s;
+  transform: translateZ(40px);
+}
+
+.shadow-1 {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.shadow-2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.45);
+}
+
+.button {
+  border: 2px solid #888EA0;
+  font-family: "Volte Medium";
+  padding: 11px 40px 10px;
+  color: #888EA0;
+  border-radius: 50px;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  text-decoration: none !important;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 0% 0%;
+  transition: all 0.3s;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  background: #ff0032;
+  border: 2px solid #ff0032;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+.button:hover {
+  color: #fff;
+  border-color: #ff0032;
+  -webkit-transform: translateY(-7px) !important;
+  transform: translateY(-7px) !important;
+  -webkit-box-shadow: 0 10px 60px -5px #ff0032;
+  -moz-box-shadow: 0 10px 60px -5px #ff0032;
+  box-shadow: 0 10px 60px -5px #ff0032;
+}
+.button:hover::before {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  margin-right: 16px;
+}
+.tabs a {
+  display: inline-block;
+  position: relative;
+  color: #888ea0;
+  text-decoration: none;
+  overflow: hidden;
+  line-height: 1.25em;
+  font-size: 20px;
+  margin-right: 16px;
+  background-image: -webkit-linear-gradient(left, #ff0032 50%, #888ea0 0);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  font-family: "Volte Medium";
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-transition: background-position 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  -moz-transition: background-position 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  -o-transition: background-position 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  transition: background-position 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+.tabs a:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2.5px;
+  background-color: #ff0032;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: width 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  -moz-transition: width 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  -o-transition: width 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+  transition: width 1s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+.tabs a.active, .tabs a:hover {
+  color: #ff0032;
+  text-decoration: none;
+  background-position: 0 0;
+}
+.tabs a.active:after, .tabs a:hover:after {
+  width: 100%;
+}
+
+/*# sourceMappingURL=build.css.map */

@@ -1,0 +1,26 @@
+.md-navbar {
+    position: fixed;
+    top: 24px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: space-between;
+    align-items: center;
+
+    .md-navbar__logo {
+        margin: 0;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    .md-navbar__links {
+        margin-right: 64px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

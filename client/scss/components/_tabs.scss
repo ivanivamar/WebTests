@@ -1,0 +1,52 @@
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    margin-right: 16px;
+
+    a {
+        display: inline-block;
+        position: relative;
+        color: #888ea0;
+        text-decoration: none;
+        overflow: hidden;
+        line-height: 1.25em;
+        font-size: 20px;
+        margin-right: 16px;
+        background-image: -webkit-linear-gradient(left, #ff0032 50%, #888ea0 0);
+        background-position: 100% 0;
+        background-size: 200% 100%;
+        font-family: 'Volte Medium';
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-transition: background-position 1s cubic-bezier(.19, 1, .22, 1) !important;
+        -moz-transition: background-position 1s cubic-bezier(.19, 1, .22, 1) !important;
+        -o-transition: background-position 1s cubic-bezier(.19, 1, .22, 1) !important;
+        transition: background-position 1s cubic-bezier(.19, 1, .22, 1) !important;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 2.5px;
+            background-color: #ff0032;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            -webkit-transition: width 1s cubic-bezier(.19, 1, .22, 1) !important;
+            -moz-transition: width 1s cubic-bezier(.19, 1, .22, 1) !important;
+            -o-transition: width 1s cubic-bezier(.19, 1, .22, 1) !important;
+            transition: width 1s cubic-bezier(.19, 1, .22, 1) !important;
+        }
+
+        &.active, &:hover {
+            color: #ff0032;
+            text-decoration: none;
+            background-position: 0 0;
+
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}

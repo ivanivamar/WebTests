@@ -1,0 +1,48 @@
+.tile {
+    width: 220px;
+    height: 320px;
+    display: inline-block;
+
+    &.history-tile {
+        box-shadow: 0 2px 40px 0 rgba($color: #000000, $alpha: .2);
+        border-radius: 6px;
+        background-color: transparent;
+        border-radius: 15px;
+        margin-right: 16px;
+        transform-style: preserve-3d;
+
+        .tile-content {
+            position: relative;
+            height: 100%;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 15px;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+
+            .content-text {
+                position: absolute;
+                bottom: 40px;
+                left: 40px;
+                color: #fff;
+                font-family: 'Volte Semibold';
+                font-size: 30px;
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 2px 60px 0 rgba($color: #000000, $alpha: .2);
+            transform: scale(1.1);
+
+            .tile-content {
+                transition: all .3s;
+                transform: translateZ(40px);
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700&display=swap');
+
+$accent-color: #ff0032;
+$accent-color2: #5D74B6;
+$normal-color: #888EA0;
+
+body {
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.Application {
+    width: 70%;
+    margin: 128px auto;
+}
+
+@import 'navigation';
+@import 'scarffolder';
+
+// Components
+@import 'components/fonttype';
+@import 'components/cards';
+@import 'components/buttons';
+@import 'components/tabs';
